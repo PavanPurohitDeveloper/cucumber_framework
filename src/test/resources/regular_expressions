@@ -1,0 +1,7 @@
+start and end symbols  ^  $
+passing values from scenario
+[a-zA-Z]{1,}  - any number of alphabets  - {1,} means atleast one occurence should be there
+\\d+   - any number of digits
+[a-zA-Z0-9]{1,}   - aplha numeric  {1,} means atleast once
+{.*}  - list
+[^\"]*   anything ( any number or special character anything )
