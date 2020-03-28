@@ -1,7 +1,6 @@
 package com.nit.cucumber;
 
 import org.junit.runner.RunWith;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -18,6 +17,6 @@ import cucumber.api.junit.Cucumber;
 		}
 		//tags= {"~@BookHotel", "@ShopOnEbay"}	//execute first and dont execute second scenario	
 	)
-public class MyRunner {
+public class MyRunnerJunitTest {
 
 }

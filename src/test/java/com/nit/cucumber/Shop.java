@@ -1,7 +1,9 @@
 package com.nit.cucumber;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.fail;
 
 import org.assertj.core.api.Assertions.*;
+import org.assertj.core.api.SoftAssertions;
 
 import cucumber.api.java.en.*;
 
@@ -20,7 +22,12 @@ public class Shop {
 	@Then("^The chart item count should increase$")
 	public void the_chart() {
 		System.out.println("The chart item count should increase");
-		assertThat("A").isEqualTo("B");
+		assertThat("B").isEqualTo("B");
+		//fail("some reason to fail");
+		
+		SoftAssertions softAssert = new SoftAssertions();
+		softAssert.assertThat("B").isEqualTo("B");//fail
+		softAssert.assertThat(false).isFalse();
+		softAssert.assertAll();
 	}
-
 }
