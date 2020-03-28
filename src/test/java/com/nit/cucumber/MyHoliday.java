@@ -3,6 +3,8 @@ package com.nit.cucumber;
 import java.util.List;
 import java.util.Map;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 import cucumber.api.java.en.Given;
@@ -11,6 +13,26 @@ import cucumber.api.java.en.When;
 
 
 public class MyHoliday {
+	
+	@Before
+	public void beforeScenario() {
+		System.out.println("----------- Before executing ----------- ");
+	}
+	
+	@After
+	public void afterScenario() {
+		System.out.println("----------- After executing ----------- ");
+	}
+	
+	/*@Before("@BookHotel")
+	public void beforeScenario() {
+		System.out.println("----------- Before executing ----------- ");
+	}
+	
+	@After("@BookHotel")
+	public void afterScenario() {
+		System.out.println("----------- After executing ----------- ");
+	}*/
 	
 	@Given("^I live in ([a-zA-Z]{1,})$")
 	public void i_live(String cityName)  {
@@ -60,6 +82,11 @@ public class MyHoliday {
 	@And("^Return flight on ([^\"]*)$")
 	public void ReturnFlightOn(String returnDate)  {
 		System.out.println("Return flight on "+returnDate);
+	}
+	
+	@Given("^I go to website www.ebay.com$")
+	public void i_go() {
+		System.out.println("I go to website www.ebay.com");
 	}
 	
 }
